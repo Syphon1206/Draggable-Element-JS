@@ -1,0 +1,21 @@
+move events get fired, the drag function is called:
+
+function drag(e) {
+  if (active) {
+  
+    e.preventDefault();
+    
+    if (e.type === "touchmove") {
+      currentX = e.touches[0].clientX - initialX;
+      currentY = e.touches[0].clientY - initialY;
+    } else {
+      currentX = e.clientX - initialX;
+      currentY = e.clientY - initialY;
+    }
+
+    xOffset = currentX;
+    yOffset = currentY;
+
+    setTranslate(currentX, currentY, dragItem);
+  }
+}
