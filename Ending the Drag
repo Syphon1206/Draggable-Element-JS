@@ -1,0 +1,6 @@
+function dragEnd(e) {
+  initialX = currentX;
+  initialY = currentY;
+
+  active = false;
+}
